@@ -48,6 +48,22 @@ var map = L.mapbox.map('map', 'YOUR MAP ID')
 //     }
 // }).addTo(map);
 
+///////////////////////////////CLICKABLE MARKERS/////////////////////
+// var marker = L.marker([40.729425, -73.993707], {
+//       icon: L.mapbox.marker.icon({
+//         'marker-color': '#9c89cc'
+//       })
+//     })
+//     .bindPopup('<button class="trigger">Hey We Are At ITP CAMP</button>')
+//     .addTo(map);
+
+// // The HTML we put in bindPopup doesn't exist yet, so we can't just say
+// // $('#mybutton'). Instead, we listen for click events on the map element which
+// // will bubble up from the tooltip, once it's created and someone clicks on it.
+// $('#map').on('click', '.trigger', function() {
+//     alert('Hello from Toronto!');
+// });
+
 ///////////////////////////////LOADING GEOJSON///////////////////////
 // var featureLayer = L.mapbox.featureLayer()
 //     .loadURL('http://www.kgrnbrg.com/Maptime/camp2015.geojson')
