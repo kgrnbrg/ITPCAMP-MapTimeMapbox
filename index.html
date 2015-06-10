@@ -1,0 +1,151 @@
+/////////////////Kyle Greenberg MapBox.js Example//////////////////////////////////// -->
+<html>
+<head>
+<meta charset=utf-8 />
+<title>MapTime</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<!-- First -->
+<!-- Load mapbox.js into your project -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+<!-- jquery -->
+
+<script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
+<!-- Initialize the map -->
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+<div id='map'></div>
+<script>
+////accessToken found below Style on mapbox.com dashboard///////////////////////////////////////////////////////////////////////
+L.mapbox.accessToken = 'YOUR ACCESS TOKEN';
+
+////////////////////////this is where you call the Map from MapboxStudio, you can find your "map id" under settings/////////////
+var map = L.mapbox.map('map', 'YOUR MAP ID')
+    .setView([40, -74.50], 4);
+
+////adding one marker/////////////////
+   // L.marker([40, -74.50]).addTo(map);
+
+/////styling markers/////////////////
+// L.mapbox.featureLayer({
+//     type: 'Feature',
+//     geometry: {
+//         type: 'Point',
+//         coordinates: [
+//          -73.993707, 40.729425
+//         ]
+//     },
+//     //marker properties
+//     properties: {
+//         title: 'ITP',
+//         description: 'This is where ITP is',
+//         'marker-size': 'large',
+//         'marker-color': '#800080', 
+//     }
+// }).addTo(map);
+
+// //loading geojson///////////////////////
+// var featureLayer = L.mapbox.featureLayer()
+//     .loadURL('http://www.kgrnbrg.com/Maptime/camp2015.geojson')
+//     .addTo(map);
+
+// //loading real time data
+// var featureLayer = L.mapbox.featureLayer()
+//     .loadURL('https://wanderdrone.appspot.com/')
+//     // Once this layer loads, we set a timer to load it again in a few seconds.
+//     .on('ready', run)
+//     .addTo(map);
+
+// function run() {
+//     featureLayer.eachLayer(function(l) {
+//         map.panTo(l.getLatLng());
+//     });
+//     window.setTimeout(function() {
+//         featureLayer.loadURL('https://wanderdrone.appspot.com/');
+//     }, 2000);
+// }
+
+///pulling from social media
+
+// // Create a Foursquare developer account: https://developer.foursquare.com/
+// // NOTE: CHANGE THESE VALUES TO YOUR OWN:
+// // Otherwise they can be cycled or deactivated with zero notice.
+// var CLIENT_ID = 'YOUR CLIENT IDI';
+// var CLIENT_SECRET = 'YOUR CLIENT SECRET';
+
+// // https://developer.foursquare.com/start/search
+// var API_ENDPOINT = 'https://api.foursquare.com/v2/venues/search' +
+//   '?client_id=CLIENT_ID' +
+//   '&client_secret=CLIENT_SECRET' +
+//   '&v=20130815' +
+//   '&ll=40.729425,-73.993707' +
+//   '&query=pizza' +
+//   '&callback=?';
+
+// // Keep our place markers organized in a nice group.
+// var foursquarePlaces = L.layerGroup().addTo(map);
+
+// // Use jQuery to make an AJAX request to Foursquare to load markers data.
+// $.getJSON(API_ENDPOINT
+//     .replace('CLIENT_ID', CLIENT_ID)
+//     .replace('CLIENT_SECRET', CLIENT_SECRET)
+//     .replace('LATLON', map.getCenter().lat +
+//         ',' + map.getCenter().lng), function(result, status) {
+
+//     if (status !== 'success') return alert('Request to Foursquare failed');
+
+//     // Transform each venue result into a marker on the map.
+//     for (var i = 0; i < result.response.venues.length; i++) {
+//       var venue = result.response.venues[i];
+//       var latlng = L.latLng(venue.location.lat, venue.location.lng);
+//       var marker = L.marker(latlng, {
+//           icon: L.mapbox.marker.icon({
+//             'marker-color': '#f9886c',
+//             'marker-size': 'large'
+//           })
+//         })
+//       .bindPopup('<strong><a href="https://foursquare.com/v/' + venue.id + '">' +
+//         venue.name + '</a></strong>')
+//         .addTo(foursquarePlaces);
+//     }
+
+// });
+
+////Guides
+//How Mapbox Works
+//https://www.mapbox.com/guides/how-mapbox-works/
+
+//MapBox API
+// https://www.mapbox.com/mapbox.js/api/v2.1.9/
+
+//MapBox Examples
+//https://www.mapbox.com/mapbox.js/example/v1.0.0/
+
+//Basic Tutorials
+//https://www.mapbox.com/base/tutorials/
+
+
+
+
+
+////Examples//////
+/////Animation example/////
+// https://www.mapbox.com/mapbox.js/example/v1.0.0/animating-flight-paths/
+//https://www.mapbox.com/mapbox.js/example/v1.0.0/animate-marker-along-line/
+//https://www.mapbox.com/mapbox.js/example/v1.0.0/dynamically-drawing-a-line/
+
+//Marker Storytelling
+//https://www.mapbox.com/mapbox.js/example/v1.0.0/markers-with-image-slideshow/
+
+//Interactivity outside of the map
+///https://www.mapbox.com/mapbox.js/example/v1.0.0/interactivity-outside-map-layer/
+
+
+</script>
+</body>
+</html>
+
