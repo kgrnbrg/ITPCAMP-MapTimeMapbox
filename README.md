@@ -4,7 +4,8 @@ Created By: Kyle Greenberg
 
 MAPS MAPS MAP! 
 What better way to visualize and tell a story about a data set than through a map!?! 
-With an open data set of your choice/or data set provided by the instructor,we will use MapBox.JS and Mapbox Studio to make an interactive map which can be easily shared and embedded.
+With an open data set of your choice/or data set attached, we can use MapBox.JS and Mapbox Studio to make an interactive map which can be easily shared and embedded.
+
 A hands-on overview of the MapBox.js API will take your map to the next level as you achieve further customization.
 
 House-Keeping Items
@@ -20,10 +21,10 @@ Go to settings and grab your Map ID
 
 
 Resources to reveiw
-ITP Camp Session on Mapbox
-www.findlatitudeandlongitude.com/batch-geocode
-jsonlint.com
-CartoDB.com
-blog.visual.ly/data-sources/
-www.mapbox.com/guides/how-mapbox-works/
-/www.mapbox.com/mapbox.js/api/v2.1.9/
+
+www.findlatitudeandlongitude.com/batch-geocode ||
+www.jsonlint.com || 
+www.cartoDB.com ||
+blog.visual.ly/data-sources/ ||
+www.mapbox.com/guides/how-mapbox-works/ ||
+www.mapbox.com/mapbox.js/api/v2.1.9/
