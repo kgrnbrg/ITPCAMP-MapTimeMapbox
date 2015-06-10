@@ -14,10 +14,10 @@ House-Keeping Items
 
 If you have successfully made a mapbox account, click the Style button which is on the top right tool bar. 
 You should see your accessToken,
-Save the token and put it somewhere on your computer that you can reference in the index.html page
+Save the token and reference it3 in the index.html attached
 
 2) Download Mapbox Studio and connect your Mapbox account with the program. 
-Go to settings and grab your Map ID
+Go to settings and grab your Map ID and reference it in the index.html attached
 
 
 Resources to reveiw
